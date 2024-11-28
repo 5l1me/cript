@@ -1,7 +1,7 @@
 from funcs import p2, p_add_q, negR, nS
 import pandas as pd
 
-print('введите данные в формате',
+print('введите Pb, X, k, ab, Y в формате',
       """
 (188,93)
 отступить
