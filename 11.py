@@ -37,7 +37,7 @@ chars2point['y'] = chars2point['y'].astype(int)
 print('Задание A')
 Ycript = []
 for k, char in zip(K, X):
-    Pm = chars2point[chars2point['char'] == char][['x', 'y']].values[0]
+    Pm = list(map(int, chars2point[chars2point['char'] == char][['x', 'y']].values[0]))
     kG = nS(k, *GA, p, a)
     kPb = nS(k, *Pb, p, a)
     Pm_add_kPb = p_add_q(*Pm, *kPb, p, a)
