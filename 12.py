@@ -40,10 +40,10 @@ gcd, xe, ye = extended_euclidean_algorithm(sb, n)
 v = xe % n
 print(f'v = {xe} mod {n} = {v}')
 u1 = hb*v%n
-print(f'u1 = {hb}*{v} mod {n}')
+print(f'u1 = {hb}*{v} mod {n} = {u1}')
 u2 = rb*v%n
-print(f'u2 = {rb}*{v} mod {n}')
-X = p_add_q(*nS(u1, *GB, p, a), *nS(u2, *Q, p, a), p, a)
+print(f'u2 = {rb}*{v} mod {n} = {u2}')
+X = p_add_q(*nS(u1, *GB, p, a, z='G'), *nS(u2, *Q, p, a, z='Q'), p, a, z=f'{u1}G+{u2}Q')
 print(f'X = {u1}{GB}+{u2}{Q} = {X}')
 assert rb == X[0]%n
 print(f'{rb} == {X[0]} mod {n}')
