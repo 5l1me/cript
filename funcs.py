@@ -65,6 +65,10 @@ def p_add_q(x1, y1, x2, y2, p, a, z=None):
         print(f'p_add_q({x1=}, {y1=}, {x2=}, {y2=}, {p=}, {a=})')
     if (x1, y1) == (x2, y2):
         return p2(x1, y1, p, a, z)
+    if x1 == x2:
+        if z is not None:
+            print(f'x1 == x2 -> {z}=𝑂')
+        return None
     if (y2 - y1) % (x2 - x1) != 0:
         f = Fraction((y2 - y1), (x2 - x1))  # Вычисление значения натуральной дроби по модулю
         gcd, xe, ye = extended_euclidean_algorithm(f.denominator, p)  # с помощью расширенного алгоритма Евклида
