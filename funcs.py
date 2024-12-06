@@ -122,5 +122,5 @@ def nS(n, xS, yS, p, a, z=None):
             z_desc = f'2({z_desc})'
             now = p2(*now, p, a, z=z_desc if z else None)
     if z is not None:
-        print(f'{n}{z} =', z_desc)
+        print(f'{n}{z} = {z_desc} = {now}')
     return now
